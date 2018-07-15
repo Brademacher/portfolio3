@@ -1,0 +1,54 @@
+html{
+    height: 100%
+  }
+  
+  body{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+  }
+  
+  #portfolio {
+      background-image: url("../images/port-back.png");
+      
+  }
+  .container {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: 80px auto 80px;
+  }
+  
+  .header {
+    grid-column: span 9;
+    justify-self: end;
+    display: inline;
+    font-size: 22px;
+    padding: 30px 0 0 0;
+    margin-right: 5%;
+  }
+  
+  .header a {
+    border-right: 3px solid rgb(69, 119, 177);
+    padding: 0 10px 0 10px;
+    text-decoration: none;
+    color: white;
+  }
+  .header a:last-child {
+    border: none;
+  }
+
+  .title {
+    grid-column: 2 / span 2;
+    justify-self: end;
+  }
+
+  /* .footer {
+    grid-column: span 9;
+    text-align: center;
+    background-color: rgba(79, 163, 219, 0.705);
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+  } */
+  
