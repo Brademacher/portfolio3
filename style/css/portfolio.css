@@ -5,26 +5,20 @@ html{
   body{
       width: 100%;
       height: 100%;
-      font-family: 'Roboto', sans-serif;
+      margin: 0;
   }
   
   #portfolio {
-      background-color: #21acec
-      
-  }
-  .container {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: 80px;
+      background-image: url("../images/port-back.png"); 
   }
   
-  h2 {
-    /* float: left; */
-    color: white;
-    font-size: 22px;
-    text-align: start
+  .container {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: 80px auto 80px;
   }
-
+  
   .header {
     grid-column: span 9;
     justify-self: end;
@@ -44,96 +38,17 @@ html{
     border: none;
   }
 
-  .btnImg {
-    width: 372px;
-    height: 372px
-  }
-  
-  .projects {
-    align-items: center;
-    max-height: 100%;
-    display: grid;
-    grid-gap: 9px;
-    grid-template-columns: auto;
-    grid-auto-rows: 372px;
+  .title {
+    grid-column: 2 / span 2;
+    justify-self: end;
   }
 
-  .footer {
+  /* .footer {
     grid-column: span 9;
     text-align: center;
     background-color: rgba(79, 163, 219, 0.705);
     color: white;
     font-size: 18px;
     font-weight: 100;
-  }
+  } */
   
-/* pixel2 and pixel2XL */
-@media screen and (min-width: 411px){
-  body {
-    margin: 0px;
-  }
-
-  .btnImg {
-    width: 411px;
-    height: 411px
-  }
-  
-  .projects {
-    align-items: center;
-    max-height: 100%;
-    display: grid;
-    grid-gap: 12px;
-    grid-auto-rows: 411px;
-  }
-}
-
-@media screen and (min-width: 731px){
-
-  .btnImg {
-    width: 360px;
-    height: 355px;
-  }
-  
-  .projects {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
-    grid-auto-rows: 360px;
-  }
-}
-
-/* @media screen and (min-width: 660px) {
-  .btnImg {
-    width: 250px;
-    height: 250px
-  }
-  
-  .projects {
-    align-items: center;
-    max-height: 100%;
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
-    grid-auto-rows: 250px;
-  }
-} */
-
-@media screen and (min-width: 1000px) {
-  body {
-    margin-left: 35px;
-  }
-
-  .btnImg {
-    width: 400px;
-    height: 400px
-  }
-  
-  .projects {
-    align-items: center;
-    max-height: 100%;
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
-    grid-auto-rows: 400px;
-  }
-}

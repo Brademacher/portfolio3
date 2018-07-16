@@ -7,75 +7,73 @@ body{
     height: 100%;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-}
-
-#home {
-  background-color: rgb(162, 66, 240);
+    background-color: rgb(250, 246, 234)
 }
 
 .container {
-  min-height: 100%;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: 80px auto;
+  grid-template-columns: auto 1fr auto;
+  grid-auto-rows: auto 80px auto;
+  z-index: 3;
 }
 
-.header {
+.nav {
   grid-column: span 12;
-  justify-self: end;
+  justify-self: center;
   display: inline;
-  font-size: 22px;
-  padding: 30px 0 0 0;
-  margin-right: 5%;
+  font-size: 2em;
+  padding: 2em 0 0 0;
+  margin-right: 5em;
+  z-index: 1;
+  background: rgb(250, 246, 234, .01)
 }
 
-.header a {
-  border-right: 3px solid rgb(69, 119, 177);
+.nav a {
+  border-right: 3px solid #6E6F6D;
   padding: 0 10px 0 10px;
   text-decoration: none;
-  color: white;
+  color: #3D4D54;
 }
-.header a:last-child {
+.nav a:last-child {
   border: none;
 }
 
-.title {
-  grid-column: 2 / span 2;
-  justify-self: end;
+#parallelogram {
+  width: 75%;
+	height: 40%;
+	-webkit-transform: skew(-20deg);
+	   -moz-transform: skew(-20deg);
+	     -o-transform: skew(-20deg);
+  background: #FA7921;
+  text-align: left;
+  margin: auto;
+  margin-top: 4em;
+  padding-top: 5em;
+  z-index: -5;
 }
 
-.clean{
-  font-size: 14px;
-  font-family: "Trebuchet MS", monospace;
-  text-align: right;
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 0px 1px #7c7a7a;
+#subTitle {
+  text-align: center;
+  font-size: 2em;
+  color: #3D4D54;
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+}
+#name {
+  text-align: center;
+  font-size: 6em;
+  color: #3D4D54;
 }
 
-.awesomeFont {
- 
-    font-family: "Georgia sans-serif", monospace;
-    font-style: normal;
-    text-align: right;
-    text-shadow: 1px 0px 1px #313131;
-      
-    color:#313131;
-    font-size: 60px;
-    font-weight: 200;
-    -webkit-animation:colorchange 4s infinite alternate;
-  }
-
-  @-webkit-keyframes colorchange {
-    0% {
-      color: #CF3721;
-    }
-    25% {
-      color: #FA812F;
-    }
-    50% {
-      color: #FAAF08;
-    }
-    75% {
-      color: #258039;
-    }
-  }
+#circle {
+  -webkit-clip-path: circle(50% at 10% 64%);
+  clip-path: circle(50% at 10% 64%);
+  background-color: #3D4D54;
+  width: 25%;
+  height: 25%;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  z-index: 5;
+}
